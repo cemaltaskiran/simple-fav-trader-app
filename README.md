@@ -2,6 +2,9 @@
 
 This app is implementation of simple favorite trader application. I has 2 fragments. One of them shows stocks and the other one shows favorites. 
 
+![Favorites](screenshots/favorites.png "List of favorite stcoks")
+![Stcoks](screenshots/stocks.png "List of stocks")
+
 Libraries Used
 --------------
 * [Foundation][0] - Components for core system capabilities, Kotlin extensions and support for
