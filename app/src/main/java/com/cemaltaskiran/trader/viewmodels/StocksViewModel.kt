@@ -1,6 +1,5 @@
 package com.cemaltaskiran.trader.viewmodels
 
-import androidx.hilt.lifecycle.ViewModelInject
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.liveData
 import androidx.lifecycle.viewModelScope
@@ -8,10 +7,13 @@ import com.cemaltaskiran.trader.data.entities.Stock
 import com.cemaltaskiran.trader.data.respository.ApiRepository
 import com.cemaltaskiran.trader.data.respository.StockRepository
 import com.cemaltaskiran.trader.utils.Resource
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
-class StocksViewModel @ViewModelInject internal constructor(
+@HiltViewModel
+class StocksViewModel @Inject constructor(
     stockRepository: StockRepository,
     apiRepository: ApiRepository
 ) : ViewModel() {

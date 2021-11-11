@@ -1,15 +1,17 @@
 package com.cemaltaskiran.trader.viewmodels
 
-import androidx.hilt.lifecycle.ViewModelInject
 import androidx.lifecycle.*
 import com.cemaltaskiran.trader.data.entities.Stock
 import com.cemaltaskiran.trader.data.respository.ApiRepository
 import com.cemaltaskiran.trader.data.respository.StockRepository
 import com.cemaltaskiran.trader.utils.Resource
 import com.cemaltaskiran.trader.utils.Utils.Companion.stockListToStringList
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.*
+import javax.inject.Inject
 
-class FavoritesViewModel @ViewModelInject internal constructor(
+@HiltViewModel
+class FavoritesViewModel @Inject internal constructor(
     stockRepository: StockRepository,
     apiRepository: ApiRepository
 ) : ViewModel() {
